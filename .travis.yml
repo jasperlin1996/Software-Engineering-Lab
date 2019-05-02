@@ -11,3 +11,11 @@ script: true
 
 script:
   - python TestCalculator.py
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_API_KEY
+  app: software-engineering-lab
+  on:
+    repo: jasperlin1996/Software-Engineering-Lab
